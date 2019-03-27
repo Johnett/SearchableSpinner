@@ -1,6 +1,9 @@
 # SearchableSpinner 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SearchableSpinner-green.svg?style=true)](https://android-arsenal.com/details/1/3272)
 
+[![](https://jitpack.io/v/Johnett/SearchableSpinner.svg)](https://jitpack.io/#Johnett/SearchableSpinner)
+
+
 Spinner with searchable items.
 
 Searchable Spinner is a dialog spinner with the search feature which allows to search the items loaded in the spinner.
@@ -10,7 +13,11 @@ Searchable Spinner is a dialog spinner with the search feature which allows to s
 # Gradle
     dependencies {
         ...
+        //if you would like to add the original version please add this to your gradle
         compile 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+        //I created this fork in order to fix that(please see release note) fragment issue.
+        implementation 'com.github.Johnett:SearchableSpinner:1.0'
+        
     }
 
 # Usage
