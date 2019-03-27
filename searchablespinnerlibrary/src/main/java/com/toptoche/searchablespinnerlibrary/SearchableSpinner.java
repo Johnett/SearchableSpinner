@@ -88,6 +88,7 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
                 }
                 // Change end.
 
+                //Prevent add fragment if its already added.
                 if(!_searchableListDialog.isAdded()) {
                     _searchableListDialog.show(scanForActivity(_context).getFragmentManager(), "TAG");
                 }
