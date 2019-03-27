@@ -12,7 +12,7 @@ Searchable Spinner is a dialog spinner with the search feature which allows to s
 
 # Gradle
 
-    ```groovy
+
     dependencies {
         ....
         //if you would like to add the original version please add this to your gradle
@@ -24,7 +24,6 @@ Searchable Spinner is a dialog spinner with the search feature which allows to s
             
             implementation 'com.github.Johnett:SearchableSpinner:1.0'
         }
-    ```
 
 # Usage
     <com.toptoche.searchablespinnerlibrary.SearchableSpinner
