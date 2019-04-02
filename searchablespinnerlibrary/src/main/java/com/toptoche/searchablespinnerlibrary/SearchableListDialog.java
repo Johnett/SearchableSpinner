@@ -7,6 +7,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Looper;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -192,6 +193,7 @@ public class SearchableListDialog extends DialogFragment implements
             Thread thread = new Thread(new Runnable(){
                 @Override
                 public void run(){
+                    Looper.prepare();
                     ((ArrayAdapter) _listViewItems.getAdapter()).getFilter().filter(null);
                 }
             });
@@ -200,6 +202,7 @@ public class SearchableListDialog extends DialogFragment implements
             Thread thread = new Thread(new Runnable(){
                 @Override
                 public void run(){
+                    Looper.prepare();
                     ((ArrayAdapter) _listViewItems.getAdapter()).getFilter().filter(s);
                 }
             });
@@ -209,6 +212,7 @@ public class SearchableListDialog extends DialogFragment implements
             Thread thread = new Thread(new Runnable(){
                 @Override
                 public void run(){
+                    Looper.prepare();
                     _onSearchTextChanged.onSearchTextChanged(s);
                 }
             });
