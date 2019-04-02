@@ -189,30 +189,12 @@ public class SearchableListDialog extends DialogFragment implements
 //        listAdapter.filterData(s);
         if (TextUtils.isEmpty(s)) {
 //                _listViewItems.clearTextFilter();
-            Thread thread = new Thread(new Runnable(){
-                @Override
-                public void run(){
-                    ((ArrayAdapter) _listViewItems.getAdapter()).getFilter().filter(null);
-                }
-            });
-            thread.start();
+            ((ArrayAdapter) _listViewItems.getAdapter()).getFilter().filter(null);
         } else {
-            Thread thread = new Thread(new Runnable(){
-                @Override
-                public void run(){
-                    ((ArrayAdapter) _listViewItems.getAdapter()).getFilter().filter(s);
-                }
-            });
-            thread.start();
+            ((ArrayAdapter) _listViewItems.getAdapter()).getFilter().filter(s);
         }
         if (null != _onSearchTextChanged) {
-            Thread thread = new Thread(new Runnable(){
-                @Override
-                public void run(){
-                    _onSearchTextChanged.onSearchTextChanged(s);
-                }
-            });
-            thread.start();
+            _onSearchTextChanged.onSearchTextChanged(s);
         }
         return true;
     }
